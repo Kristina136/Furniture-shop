@@ -13,7 +13,7 @@ function Items() {
           if (selectedCategory === "SHOW ALL") return true;
           return selectedCategory === el.category;
         })
-        .map((e, i) => (
+        .map((e) => (
           <Item e={e} key={e.id}}/>
         ))}
     </div>
