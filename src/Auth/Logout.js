@@ -19,8 +19,8 @@ const Logout = () => {
           if (selectedCategory === "SHOW ALL") return true;
           return selectedCategory === el.category;
         })
-        .map((e, i) => (
-          <Offer e={e} key={i}/>
+        .map((e) => (
+          <Offer e={e}  key={e.id}/>
         ))}
    </div>
     </div>
