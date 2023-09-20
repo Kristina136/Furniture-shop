@@ -3,25 +3,34 @@ import Buy from "./Buy";
 import { BiCartDownload } from "react-icons/bi";
 import { AiOutlineCheckSquare } from "react-icons/ai";
 import { MdOutlineFavorite } from "react-icons/md";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../Redux/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, getCartItems } from "../Redux/cartSlice";
 
-function Item({ e}) {
+function Item({e}) {
+
   const [push, setPush] = useState(false);
   const [pushFav, setPushFav] = useState(false);
   const [quantity, setQuantity] = useState(0);
+  const cartArray=useSelector(getCartItems)
   const dispatch = useDispatch();
+
+ 
+  
 
 const add=()=>{
   dispatch(addToCart({ e, quantity }))
   setPush(true)
 }
+
+
 const changeColor=()=>{
   setPushFav(true)
+
+  
 }
 
   return (
-    <div className="itemEach">
+    <div className="itemEach" >
       <img className="eachImg" src={`./${e.img}.jpg`} alt="alt" />
       <MdOutlineFavorite onClick={changeColor} className={pushFav ? "eachHeartPushed eachHeart": "eachHeart"} size={40} color="#69696b" />
       <p>{e.name}</p>
