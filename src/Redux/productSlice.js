@@ -4,7 +4,7 @@ export const productSlice = createSlice({
   name: "items",
   
   initialState: {
-    selectedCategory: "SOFAS",
+    selectedCategory: "DINING SETS",
   },
 
   reducers: {
