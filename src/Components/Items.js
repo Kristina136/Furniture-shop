@@ -14,7 +14,7 @@ function Items() {
           return selectedCategory === el.category;
         })
         .map((e, i) => (
-          <Item e={e} key={i}/>
+          <Item e={e} key={e.id}}/>
         ))}
     </div>
   );
