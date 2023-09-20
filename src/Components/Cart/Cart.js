@@ -11,7 +11,7 @@ function Cart() {
 <div>
 {!show ? <div className="cartComonent">
        <p className="headerCart">YOUR ORDER</p>
-    {cartItems.map((e,i)=><CartItems e={e} key={i}/>)}
+    {cartItems.map((e)=><CartItems e={e} key={e.itemId}/>)}
 
     <h4>Subtotal: {totalPrice} $</h4> 
     <button className="checkoutBtn" onClick={()=>setShow(true)}>Check out</button>
