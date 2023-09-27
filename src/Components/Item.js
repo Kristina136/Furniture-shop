@@ -11,7 +11,6 @@ function Item({e}) {
   const [push, setPush] = useState(false);
   const [pushFav, setPushFav] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const cartArray=useSelector(getCartItems)
   const dispatch = useDispatch();
 
  
