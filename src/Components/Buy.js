@@ -8,7 +8,7 @@ const addQuantity=()=>{
 }
 const removeQuantity=()=>{
     const newQuantity= quantity-1
-    if(newQuantity<0)return
+    if(newQuantity<1)return
     setQuantity(newQuantity)
 }
 
