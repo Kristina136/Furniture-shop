@@ -3,8 +3,8 @@ import Buy from "./Buy";
 import { BiCartDownload } from "react-icons/bi";
 import { AiOutlineCheckSquare } from "react-icons/ai";
 import { MdOutlineFavorite } from "react-icons/md";
-import { useDispatch, useSelector } from "react-redux";
-import { addToCart, getCartItems } from "../Redux/cartSlice";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../Redux/cartSlice";
 
 function Item({e}) {
 
